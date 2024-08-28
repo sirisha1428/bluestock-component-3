@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluestock</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="bluestock logo.jpg" alt="Bluestock Logo" class="logo-image"> <!-- Add this line for the logo image -->
+            <h1>Bluestock</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+                <li><a href="#">MEDIA</a></li>
+                <li><a href="#">BROKERS</a></li>
+                <li><a href="#">LIVE NEWS</a></li>
+            </ul>
+        </nav>
+        <div class="auth">
+            <button>Sign In</button>
+            <button>Sign Up</button>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#active-clients" id="active-clients-link"><img src="active clients icon.png" alt="Active Clients" class="sidebar-icon">Active Clients</a></li>
+                <li><a href="#charges" id="charges-link"><img src="pros cons.png" alt="Charges" class="sidebar-icon">Charges</a></li>
+                <li><a href="#complaints" id="complaints-link"><img src="financial.png" alt="Complaints" class="sidebar-icon">Complaints</a></li>
+                <li><a href="#shareholding" id="shareholding-link"><img src="shareholding icon.png" alt="Share holding" class="sidebar-icon">Share Holding</a></li>
+                <li><a href="#pros-cons" id="pros-cons-link"><img src="pros cons.png" alt="Pros & Cons" class="sidebar-icon">Pros & Cons</a></li>
+                <li><a href="#ratings" id="ratings-link"><img src="ratings icon.png" alt="Ratings" class="sidebar-icon">Ratings</a></li>
+                <li><a href="#financials" id="financials-link"><img src="financial.png" alt="Financials" class="sidebar-icon">Financials</a></li>
+            </ul>
+        </aside>
+        
+        
+        <main>
+            <section class="compare">
+                <div class="broker angel-one">
+                    <img src="Angel one.png" alt="Angel One Logo" style="width:70px;height:auto;">
+                    <h2>Angel One</h2>
+                    <div class="stars" id="angel-one-stars">★★★★☆</div>
+                    <div class="overall-rating" id="angel-one-rating">4.7</div><br>
+                    <button class="green-button">Open Demat Account</button>
+                </div>
+                <div class="versus">VS</div>
+                <div class="broker zerodha">
+                    <img src="Zerodha.png" alt="Zerodha Logo" style="width:70px;height:auto;">
+                    <h2>Zerodha</h2>
+                    <div class="stars" id="zerodha-stars">★★★★☆</div>
+                    <div class="overall-rating" id="zerodha-rating">4.6</div><br>
+                    <button class="green-button">Open Demat Account</button>
+                </div>
+            </section>
+            <section id="active-clients" class="data">
+                <h3>Active Clients</h3>
+                <div class="chart">
+                    <canvas id="myChart"></canvas>
+                </div><br>
+                <section id="charges" class="data">
+                <h3>Account Opening and Maintenance Charges</h3>
+                <table id="charges-table">
+            <thead>
+                 <tr>
+                    <th>Charges</th>
+                    <th>Angel One</th>
+                    <th>Zerodha</th>
+                 </tr>
+           </thead>
+           <tbody>
+           <tr>
+            <td>Account Opening charges</td>
+            <td>0</td>
+            <td>200</td>
+          </tr>
+          <tr>
+            <td>Maintenance</td>
+            <td>₹0 for the first year then ₹23.6 per month</td>
+            <td>₹300/year</td>
+          </tr>
+         </tbody>
+         </table>
+         <h4>Brokerage Charges</h4>
+         <table>
+             <thead>
+                 <tr>
+                     <th>Brokerage Charges</th>
+                     <th>Angel One</th>
+                     <th>Zerodha</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td>Intra Day</td>
+                     <td>₹20 or 0.25% (Whichever is lower)</td>
+                     <td>₹20 or 0.03% executed order whichever is lower</td>
+                 </tr>
+                 <tr>
+                     <td>Futures</td>
+                     <td>₹20 or 0.25% (whichever is lower)</td>
+                     <td>₹20 or 0.03%executed order whichever is lower</td>
+                 </tr>
+                 <tr>
+                     <td>Options</td>
+                     <td>₹20 or 0.25% (whichever is lower)</td>
+                     <td>₹20 per executed order(on Turnover)</td>
+                 </tr>
+                 <tr>
+                     <td>Delivery</td>
+                     <td>Zero</td>
+                     <td>Zero</td>
+                 </tr>
+             </tbody>
+         </table>
+        <h4>Brokerage Charges</h4><br><br>
+<div class="container">
+    <div class="row">
+        <div class="box box-green">
+            <img src="Angel one.png" class="icon" alt="Icon">
+            <h5>23.6</h5>
+        </div>
+        <div class="label">Auto Square Off</div>
+        <div class="box box-blue">
+            <img src="Zerodha.png" class="icon" alt="Icon">
+            <h5>59</h5>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="box box-green">
+            <img src="Angel one.png" class="icon" alt="Icon">
+            <h5>20</h5>
+        </div>
+        <div class="label">Call & Trade</div>
+        <div class="box box-blue">
+            <img src="Zerodha.png" class="icon" alt="Icon">
+            <h5>50</h5>
+        </div>
+    </div><br>
+
+    <div class="row">
+        <div class="box box-green">
+            <img src="Angel one.png" class="icon" alt="Icon">
+            <h5>15.34</h5>
+        </div>
+        <div class="label">DP Charges</div>
+        <div class="box box-blue">
+            <img src="Zerodha.png" class="icon" alt="Icon">
+            <h5>15.93</h5>
+        </div>
+    </div>
+</div>
+            </section>
+            <section id="complaints" class="data">
+                <h4>Complaints</h4>
+                <div id="chartContainer">
+                    <canvas id="complaintChart"></canvas>
+                </div>
+            </section>
+            <section id="shareholding" class="data">
+                <h4>Shareholdings</h4>
+                <div id="Bar-container" class="chartgraph-container">
+                    <canvas id="shareChart"></canvas>
+                    <div id="chart-label" class="chart-label">AngelOne</div>
+                </div>
+                <br><br>
+
+                <div id="Hold-container" class="chartgraph-container">
+                    <canvas id="HoldChart"></canvas>
+                    <div id="hold-label" class="chart-label">Zerodha</div>
+                </div><br>
+            </section>
+                <h4>Pros and Cons Table</h4>
+    <table id="pros-cons">
+        <thead>
+            <tr>
+                <th>Pros<img src="Angel one.png" alt="Logo" class="pros-logo"></th>
+                <th>Cons</th>
+            </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <td><img src="pros.png" alt="Icon" class="text-icon">Angel one charges zero account opening charges as well as zero annual maintenance charges for only the first year.</td>
+            <td><img src="cons.png" alt="Icon" class="text-icon">User Interface is a bit complex as it is not for beginners.</td>
+        </tr>
+        <tr>
+            <td><img src="pros.png" alt="Icon" class="text-icon">Zero brokerage charges for equity delivery and remaining segments like intraday and F&O, which is a flat Rs.20 per trade.</td>
+            <td><img src="cons.png" alt="Icon" class="text-icon">Call and trade fee is charged at an extra Rs.20 per executed order.</td>
+        </tr>
+    </tbody>
+</table>
+<table id="pros-cons">
+    <thead>
+        <tr>
+            <th>Pros<img src="Zerodha.png" alt="Logo" class="pros-logo"></th>
+            <th>Cons</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr>
+        <td><img src="pros.png" alt="Icon" class="text-icon">You don't pay any brokerage when you buy shares using cash-and-carry(CNC).Delivery trade has no leverage.Once bought shares get delivered to your demat account and if sold,shares will get debited from your demat account</td>
+        <td><img src="cons.png" alt="Icon" class="text-icon">Doesn't provide stock tips,research reports for recommendations</td>
+    </tr>
+    <tr>
+        <td><img src="pros.png" alt="Icon" class="text-icon">They offer services under a simple pricing model.They charge 0.03% or Rs 20 per executed order,whichever is lower,regardless of the trade size.The maximum brokerage paid by the customer is Rs 20 per trade.</td>
+        <td><img src="cons.png" alt="Icon" class="text-icon">Lifetime free AMC demat account plans are not available.</td>
+    </tr>
+    <tr>
+        <td><img src="pros.png" alt="Icon" class="text-icon">Zerodha is a self-clearing broker.They don't charge clearing charges from customers.</td>
+        <td><img src="cons.png" alt="Icon" class="text-icon">An additional charge of Rs 50 per executed order for MIS/BO/CO positions which are not square off by the customer.</td>
+    </tr>
+    <tr>
+        <td><img src="pros.png" alt="Icon" class="text-icon">Set long-standing stop loss and target orders for your stock investments.</td>
+        <td><img src="cons.png" alt="Icon" class="text-icon">Call & Trade is available at an additional fee of Rs 50 per executed order.</td>
+    </tr>
+    <tr>
+        <td><img src="pros.png" alt="Icon" class="text-icon">An all-new mobile app built for both,passive investors and active day traders, with significant speed and and user experience enhancements.</td>
+        <td><img src="cons.png" alt="Icon" class="text-icon">3-in-1 trading account is not available as Zerodha doesn't provide banking services.</td>
+    </tr>
+</tbody>
+</table>
+<section id="ratings" class="data">
+<h4>Ratings</h4>
+<div class="ratings-wrapper">
+    <div class="rating-container">
+        <div class="logo-container">
+            <img src="Angel one.png" alt="Angel One" width="70">
+        </div>
+        <h2>Angel One</h2>
+        <div class="stars" id="overall-stars">★★★★☆</div>
+        <div class="overall-rating" id="overall-rating">4.7</div>
+        <div class="rating-details">
+            <div>
+                <span>Trust Factor</span>
+                <span class="stars" id="trust-factor">★★★★★</span>
+            </div>
+            <div>
+                <span>Ease of Use</span>
+                <span class="stars" id="ease-of-use">★★★★☆</span>
+            </div>
+            <div>
+                <span>Technology</span>
+                <span class="stars" id="technology">★★★★★</span>
+            </div>
+        </div>
+        <a href="#" class="open-account">Open Demat Account</a>
+    </div>
+    <div class="rating-container">
+        <div class="logo-container">
+            <img src="Zerodha.png" alt="Zerodha" width="50">
+        </div>
+        <h2>Zerodha</h2>
+        <div class="overall-rating">
+            <div class="stars">★★★★☆</div>
+            <div class="rating-value">4.6</div>
+        </div>
+        <div class="rating-details">
+            <div>
+                <span>Trust Factor</span>
+                <span class="stars">★★★★★</span>
+            </div>
+            <div>
+                <span>Ease of Use</span>
+                <span class="stars">★★★★</span>
+            </div>
+            <div>
+                <span>Technology</span>
+                <span class="stars">★★★★★</span>
+            </div>
+        </div>
+        <a href="#" class="open-account">Open Demat Account</a>
+    </div>
+</div><br>
+</section>
+<section id="financials" class="data">
+<h4>Financials</h4>
+<canvas id="combinedChart" width="400" height="200"></canvas>
+</section>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
